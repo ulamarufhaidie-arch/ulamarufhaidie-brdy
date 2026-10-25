@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Happy Birthday, Chloe Dema-ala! 🎂🥳</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #fce7f0;
+      background-image: 
+        linear-gradient(#f7c3d7 1.5px, transparent 1.5px),
+        linear-gradient(90deg, #f7c3d7 1.5px, transparent 1.5px);
+      background-size: 24px 24px;
+      font-family: 'Fredoka', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Top Bunting Flags */
+    .bunting-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .bunting-svg {
+      width: 100%;
+      height: 80px;
+    }
+
+    /* Main Container */
+    .main-card {
+      width: 90%;
+      max-width: 760px;
+      background: #fdf5f8;
+      border: 4px solid #f29bb2;
+      border-radius: 28px;
+      padding: 40px 35px;
+      box-shadow: 0 15px 35px rgba(230, 110, 140, 0.2);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 650px) {
+      .main-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+      }
+    }
+
+    /* Left Section */
+    .left-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    @media (max-width: 650px) {
+      .left-content {
+        align-items: center;
+        margin-bottom: 25px;
+      }
+    }
+
+    .title-wrapper {
+      position: relative;
+    }
+
+    .title-wrapper h1 {
+      font-size: 3.2rem;
+      color: #ff3366;
+      text-shadow: 3px 3px 0px #ffffff, 5px 5px 0px #ffb3c6;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+
+    .party-hat {
+      position: absolute;
+      top: -25px;
+      right: -20px;
+      font-size: 2.5rem;
+      transform: rotate(20deg);
+      animation: wiggle 2s infinite ease-in-out;
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(20deg) scale(1); }
+      50% { transform: rotate(30deg) scale(1.1); }
+    }
+
+    .date-badge {
+      background: #ff7597;
+      color: white;
+      font-weight: 600;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 10px rgba(255, 117, 151, 0.3);
+    }
+
+    .btn-click-here {
+      background: #ff4071;
+      color: white;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      padding: 12px 34px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 6px 0px #c92250, 0 10px 15px rgba(255, 64, 113, 0.3);
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-click-here:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 0px #c92250, 0 12px 20px rgba(255, 64, 113, 0.4);
+    }
+
+    .btn-click-here:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0px #c92250, 0 4px 8px rgba(255, 64, 113, 0.3);
+    }
+
+    /* Right Section Character / Image */
+    .right-content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .avatar-circle {
+      width: 210px;
+      height: 210px;
+      background: #fff0f5;
+      border: 4px solid #ff9ebb;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      box-shadow: inset 0 0 20px rgba(255, 182, 193, 0.5);
+      overflow: hidden;
+    }
+
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .balloon-held {
+      position: absolute;
+      top: -30px;
+      right: -10px;
+      width: 52px;
+      height: 62px;
+      background: #ff5e83;
+      border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+      animation: floatBalloon 3s ease-in-out infinite;
+      z-index: 2;
+    }
+
+    .balloon-held::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 8px solid #ff5e83;
+    }
+
+    @keyframes floatBalloon {
+      0%, 100% { transform: translateY(0) rotate(5deg); }
+      50% { transform: translateY(-10px) rotate(-5deg); }
+    }
+
+    .dear-you-tag {
+      position: absolute;
+      bottom: -10px;
+      background: #ffffff;
+      border: 2px solid #ff85a2;
+      padding: 4px 18px;
+      border-radius: 14px;
+      font-size: 0.9rem;
+      color: #ff3366;
+      font-weight: 700;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      z-index: 2;
+    }
+
+    /* Modal Overlay & Card Flip */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(4px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      z-index: 100;
+      padding: 15px;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* Greeting Card Setup */
+    .card-container {
+      width: 340px;
+      height: 460px;
+      perspective: 1200px;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .overlay.active .card {
+      transform: rotateY(-180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Card Front (Pink Cover) */
+    .card-front {
+      background: linear-gradient(135deg, #ff6b8b, #ff8e53);
+      color: white;
+      border: 4px solid #ffffff;
+    }
+
+    .card-front h2 {
+      font-size: 2.2rem;
+      margin-top: 15px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .card-front .icon {
+      font-size: 4rem;
+    }
+
+    /* Card Back (Inside Pink Letter) */
+    .card-back {
+      background: #ff5c8a;
+      color: white;
+      transform: rotateY(180deg);
+      border: 4px solid #ffffff;
+      justify-content: space-between;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .card-body {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      background: rgba(255, 255, 255, 0.18);
+      padding: 16px;
+      border-radius: 14px;
+      text-align: left;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .close-btn {
+      background: #ffffff;
+      color: #ff3366;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 18px;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+
+    .close-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Confetti Canvas */
+    #confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 101;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bunting Party Banner -->
+  <div class="bunting-container">
+    <svg class="bunting-svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+      <path d="M0,20 Q300,60 600,20 Q900,60 1200,20" fill="none" stroke="#ff85a2" stroke-width="2"/>
+      <polygon points="50,26 80,70 110,21" fill="#ff4071" />
+      <polygon points="150,21 180,68 210,23" fill="#ffb3c6" />
+      <polygon points="250,24 280,72 310,28" fill="#ff7597" />
+      <polygon points="350,28 380,74 410,29" fill="#ffd166" />
+      <polygon points="450,28 480,70 510,25" fill="#06d6a0" />
+      <polygon points="550,23 580,66 610,21" fill="#118ab2" />
+      <polygon points="650,21 680,68 710,24" fill="#ff4071" />
+      <polygon points="750,24 780,72 810,28" fill="#ffb3c6" />
+      <polygon points="850,28 880,75 910,28" fill="#ffd166" />
+      <polygon points="950,27 980,69 1010,22" fill="#06d6a0" />
+      <polygon points="1050,21 1080,65 1110,20" fill="#ff7597" />
+    </svg>
+  </div>
+
+  <!-- Main Screen Box -->
+  <div class="main-card">
+    <div class="left-content">
+      <div class="title-wrapper">
+        <h1>Happy<br>Birthday</h1>
+        <div class="party-hat">🥳</div>
+      </div>
+      
+      <div class="date-badge">Special Day 🎉</div>
+      
+      <button class="btn-click-here" id="openCardBtn">
+        Click Here 🎁
+      </button>
+    </div>
+
+    <div class="right-content">
+      <div class="avatar-circle">
+        <!-- Photo inside circle -->
+        <img src="pich.jpg" alt="Chloe" class="avatar-img" />
+
+        <div class="balloon-held"></div>
+        <div class="dear-you-tag">Chloe</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Modal Overlay -->
+  <div class="overlay" id="overlay">
+    <div class="card-container">
+      <div class="card" id="card">
+        <!-- Front Cover -->
+        <div class="card-face card-front">
+          <div class="icon">🎁</div>
+          <h2>HAPPY BIRTHDAY!</h2>
+        </div>
+
+        <!-- Inside Card Letter -->
+        <div class="card-face card-back">
+          <div class="card-header">
+            <span>To You! 💖</span>
+          </div>
+          <div class="card-body">
+            Happy Birthday, Chloe Dema-ala! 🎂🥳<br><br>
+            Hope you enjoy your day and have lots of fun! Wishing you more blessings, happiness, good health, and success in life. Enjoy your special day and make more happy memories. Stay safe and God bless always! 🎉💗
+          </div>
+          <button class="close-btn" id="closeCardBtn">Close ✨</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <script>
+    const openBtn = document.getElementById('openCardBtn');
+    const closeBtn = document.getElementById('closeCardBtn');
+    const overlay = document.getElementById('overlay');
+    const canvas = document.getElementById('confetti-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Confetti Animation
+    function createConfetti() {
+      particles = [];
+      const colors = ['#ff4071', '#ffb3c6', '#ffd166', '#06d6a0', '#118ab2', '#ffffff'];
+      for (let i = 0; i < 90; i++) {
+        particles.push({
+          x: window.innerWidth / 2,
+          y: window.innerHeight / 2,
+          vx: (Math.random() - 0.5) * 14,
+          vy: (Math.random() - 0.7) * 16,
+          size: Math.random() * 8 + 4,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * 360,
+          vRot: (Math.random() - 0.5) * 10
+        });
+      }
+    }
+
+    function updateConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((p, index) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.25;
+        p.rotation += p.vRot;
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rotation * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+        ctx.restore();
+
+        if (p.y > window.innerHeight) {
+          particles.splice(index, 1);
+        }
+      });
+
+      if (particles.length > 0) {
+        requestAnimationFrame(updateConfetti);
+      }
+    }
+
+    openBtn.addEventListener('click', () => {
+      overlay.classList.add('active');
+      createConfetti();
+      updateConfetti();
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('active');
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
